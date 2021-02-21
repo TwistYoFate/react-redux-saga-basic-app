@@ -5,6 +5,7 @@ import createSagaMiddleware from "redux-saga";
 import usersWatcher from "./saga/Watcher/usersWatcher";
 
 // ----------------------------------------
+//---Here we have a single state for store called "initialState" with a single reducer called "reducer"
 
 const initialState = {
   counter: 0,
@@ -29,6 +30,8 @@ function reducer(state = initialState, action) {
 }
 
 //-----------------------------------------
+//-----Here we used SAGA MIDDLEWARE and COMBINE REDUCERS
+//-----Also created and exported the store after connecting them all together
 
 const sagaMiddleware = createSagaMiddleware();
 
